@@ -1,9 +1,8 @@
 public class Pessoa {
-    private Comida comida;
     private String nome;
     private int idade;
 
-    public Pessoa() {
+    public Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }

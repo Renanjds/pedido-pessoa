@@ -1,6 +1,10 @@
 public class Bebida {
     private String bebidaFavorita;
 
+    public Bebida(String bebidaFavorita) {
+        this.bebidaFavorita = bebidaFavorita;
+    }
+
     public String getBebidaFavorita() {
         return bebidaFavorita;
     }

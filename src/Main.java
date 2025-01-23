@@ -3,27 +3,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Pessoa pessoa = new Pessoa();
 
         System.out.println("Qual seu nome ? ");
-        pessoa.setNome(scanner.nextLine());
+        String nome = scanner.nextLine();
 
         System.out.println("Qual sua idade ? ");
-        pessoa.setIdade(scanner.nextInt());
+        int idade = scanner.nextInt();
         scanner.nextLine();
+        Pessoa pessoa = new Pessoa(nome,idade);
 
-        Comida comida = new Comida();
         System.out.println("Qual sua comida favorita ?");
-        System.out.println("Opções: Lasanha, Feijoada, Macarrão");
-        comida.setComidaFavorita(scanner.nextLine());
+        System.out.println("<Opções: Lasanha, Feijoada, Macarrão>");
+        String comidaFavorita = scanner.nextLine();
+        Comida comida = new Comida(comidaFavorita);
 
-        Bebida bebida = new Bebida();
         // Limão, Abacaxi, Kiwi, Morango
         System.out.println("Qual sua bebida favorita ? ");
-        System.out.println("Opções : Limão , Abacaxi , Kiwi , Morango");
-        bebida.setBebidaFavorita(scanner.nextLine());
+        System.out.println("<Opções: Limão , Abacaxi , Kiwi , Morango>");
+        String bebidaFavorita = (scanner.nextLine());
+        Bebida bebida = new Bebida(bebidaFavorita);
 
         scanner.close();
 
+        System.out.println(pessoa.getNome() + " tem " + pessoa.getIdade() + " anos.");
+        System.out.println("Gosta de comer " + comida.getComidaFavorita() + " e tomar suco de " + bebida.getBebidaFavorita() + ".");
     }
 }
